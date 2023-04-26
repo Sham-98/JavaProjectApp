@@ -5,27 +5,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddLutemonActivity">
-
-    <EditText
-<<<<<<< HEAD
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Lutemonin nimi"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-=======
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="318dp" />
->>>>>>> f6659a800928b9b06e7b0be36b88c34b98380ab8
 </androidx.constraintlayout.widget.ConstraintLayout>
