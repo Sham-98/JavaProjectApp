@@ -9,12 +9,11 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Storage {
-    // Lisätty 25.04 tästä ---
     private static Storage storage = null;
-    private ArrayList<Lutemon> lutemon;
+    private ArrayList<Lutemon> lutemons;
 
     private Storage() {
-        lutemon = new ArrayList<>();
+        lutemons = new ArrayList<>();
     }
 
     public static synchronized Storage getInstance() {
@@ -24,14 +23,17 @@ public class Storage {
         return storage;
     }
 
-    /*public void addLutemon(Lutemon lutemon) {
-        lutemon.add(lutemon);
-    }*/
+    void addLutemon(Lutemon lutemon) {
+        lutemons.add(lutemon);
+    }
 
+    public Object getLutemonList() {
+        return null;
+    }
     public void saveLutemons(Context context) {
         try {
             ObjectOutputStream writer = new ObjectOutputStream(context.openFileOutput("user.data", Context.MODE_PRIVATE));
-            writer.writeObject(lutemon);
+            writer.writeObject(lutemons);
             writer.close();
         } catch (IOException e) {
             System.out.println("Tallentaminen epäonnistui");
@@ -41,7 +43,7 @@ public class Storage {
     public void loadUsers(Context context) {
         try {
             ObjectInputStream reader = new ObjectInputStream(context.openFileInput("user.data"));
-            lutemon = (ArrayList<Lutemon>) reader.readObject();
+            lutemons = (ArrayList<Lutemon>) reader.readObject();
             reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Lukeminen ei onnistunut");
@@ -54,10 +56,4 @@ public class Storage {
             e.printStackTrace();
         }
     }
-
-    public Object getLutemonList() {
-
-        return null;
-    }
-    // -- tähän asti 25.04 - Annika
 }
