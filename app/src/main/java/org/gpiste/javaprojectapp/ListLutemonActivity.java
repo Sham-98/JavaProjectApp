@@ -1,29 +1,28 @@
 package org.gpiste.javaprojectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ListView;
-
+// Was edited by Sham 26.4.2023
 public class ListLutemonActivity extends AppCompatActivity {
-    private ListView mListView;
-    private LutemonAdapter mAdapter;
+    private Storage storage;
+    private RecyclerView recyclerView;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nlist_lutemon);
+        setContentView(R.layout.activity_list_lutemon);
 
-        mListView = findViewById(R.id.list_view);
-        mAdapter = new LutemonAdapter(this);
+        storage = Storage.getInstance();
+        recyclerView = findViewById(R.id.lista1);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Retrieve Lutemons from a SQLite database
-        List<Lutemon> lutemons = LutemonDatabase.getInstance(this).getLutemons();
+        recyclerView.setAdapter(new ListLutemonAdapter(getApplicationContext(), Storage.getInstance().getLutemonList()));
 
-        // Add Lutemons to the adapter
-        mAdapter.addAll(lutemons);
-
-        // Set the adapter on the ListView
-        mListView.setAdapter(mAdapter);
     }
 }
