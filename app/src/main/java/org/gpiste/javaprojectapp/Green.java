@@ -1,6 +1,6 @@
 package org.gpiste.javaprojectapp;
 
-public class Green extends Lutemon{
+public class Green extends Lutemon {
     public Green(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int id) {
         super(name, "Green", 6, 3, experience, health, 19, id);
     }
