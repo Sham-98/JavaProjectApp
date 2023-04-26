@@ -1,4 +1,4 @@
 package org.gpiste.javaprojectapp;
 
-public class Black {
+public class Black extends Lutemon {
 }
