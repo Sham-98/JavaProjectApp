@@ -3,39 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="10dp"
     android:background="#8C55E4"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/Name2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="16sp" />
 
+    <TextView
+        android:id="@+id/notes1"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="TextView"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/Name"
-            android:layout_width="244dp"
-            android:layout_height="35dp"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/notes2"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="TextView"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/notes"
-            android:layout_width="236dp"
-            android:layout_height="47dp"
-            android:text="TextView"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/notes3"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="TextView"
+        android:textSize="16sp" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/notes4"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="TextView"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/notes5"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="TextView"
+        android:textSize="16sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
+        <ImageView
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
+
