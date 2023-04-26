@@ -11,9 +11,9 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public TextView Name;
 
-    public ViewHolder(@NonNull View itemView) {
-        super(lutemonName);
-        Name = itemView.findViewById(R.id.Name);
+    public ViewHolder(@NonNull View lutemonView) {
+        super(lutemonView);
+        View txtName = lutemonView.findViewById(R.id.txtName);
     }
 
 }
