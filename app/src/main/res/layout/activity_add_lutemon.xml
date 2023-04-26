@@ -5,28 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddLutemonActivity">
-<<<<<<< HEAD
-
-        <
-
-        <
-
-        <
-
-        <
-
-        <
-
-        <
-
-        < HEAD
-=======
->>>>>>> f29a254e12ae655b3ac6f0239f8e1163c223102c
 
         <EditText
             android:id="@+id/editTextText"
-            android:layout_width="230dp"
-            android:layout_height="45dp"
+            android:layout_width="249dp"
+            android:layout_height="55dp"
             android:ems="10"
             android:hint="Lutemonin nimi"
             android:inputType="text"
@@ -47,14 +30,16 @@
             app:layout_constraintVertical_bias="0.038" />
 
         <RadioGroup
-            android:layout_width="169dp"
-            android:layout_height="242dp"
+            android:layout_width="163dp"
+            android:layout_height="255dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginBottom="202dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.100000024">
+            app:layout_constraintVertical_bias="0.07999998">
 
                 <RadioButton
                     android:id="@+id/radioButton"
@@ -84,13 +69,7 @@
                     android:id="@+id/radioButton5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
                     android:text="Musta" />
         </RadioGroup>
-        <![CDATA[
-=======
-                    android:text="RadioButton" />
-        </RadioGroup>
->>>>>>> f29a254e12ae655b3ac6f0239f8e1163c223102c
 
 </androidx.constraintlayout.widget.ConstraintLayout>
