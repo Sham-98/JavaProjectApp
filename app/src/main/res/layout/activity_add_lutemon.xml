@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddLutemonActivity">
-<<<<<<< HEAD
 
         <EditText
             android:id="@+id/editTextText"
@@ -69,9 +68,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="RadioButton" />
-        </RadioGroup><![CDATA[
+        </RadioGroup>
 
-        =======
->>>>>>> dd958dd6e73a631e444dc533ed472d5b2f920ac6
-]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
