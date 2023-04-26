@@ -1,8 +1,28 @@
 package org.gpiste.javaprojectapp;
 
 import android.content.Context;
+import android.view.ViewGroup;
 
-public class ListLutemonAdapter {
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class ListLutemonAdapter extends RecyclerView.Adapter {
     public ListLutemonAdapter(Context applicationContext, Object lutemonList) {
+    }
+
+    @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
     }
 }
