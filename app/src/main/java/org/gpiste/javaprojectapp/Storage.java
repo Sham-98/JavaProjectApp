@@ -54,5 +54,8 @@ public class Storage {
             e.printStackTrace();
         }
     }
+
+    public Object getLutemonList() {
+    }
     // -- tähän asti 25.04 - Annika
 }
