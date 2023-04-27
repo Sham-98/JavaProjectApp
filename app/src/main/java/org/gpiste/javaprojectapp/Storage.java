@@ -10,12 +10,9 @@ import java.util.ArrayList;
 
 public class Storage {
     private static Storage storage = null;
-    private ArrayList<Lutemon> lutemons;
-
-    private Storage() {
-        lutemons = new ArrayList<>();
-    }
-
+    private ArrayList<Lutemon> Home;
+    private ArrayList<Lutemon> Training;
+    private ArrayList<Lutemon> Battle;
     public static synchronized Storage getInstance() {
         if (storage == null) {
             storage = new Storage();
@@ -23,37 +20,16 @@ public class Storage {
         return storage;
     }
 
-    void addLutemon(Lutemon lutemon) {
-        lutemons.add(lutemon);
+    private Storage() {
+        Home = new ArrayList<>();
+        Training = new ArrayList<>();
+        Battle = new ArrayList<>();
     }
 
-    public Object getLutemonList() {
-        return null;
-    }
-    public void saveLutemons(Context context) {
-        try {
-            ObjectOutputStream writer = new ObjectOutputStream(context.openFileOutput("user.data", Context.MODE_PRIVATE));
-            writer.writeObject(lutemons);
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("Tallentaminen epäonnistui");
+    public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> fromList, ArrayList<Lutemon> toList) {
+        if (fromList.remove(lutemon)) {
+            toList.add(lutemon);
         }
     }
 
-    public void loadUsers(Context context) {
-        try {
-            ObjectInputStream reader = new ObjectInputStream(context.openFileInput("user.data"));
-            lutemons = (ArrayList<Lutemon>) reader.readObject();
-            reader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Lukeminen ei onnistunut");
-            e.printStackTrace();
-        } catch (IOException e) {
-            System.out.println("Lukeminen ei onnistunut");
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            System.out.println("Lukeminen ei onnistunut");
-            e.printStackTrace();
-        }
-    }
 }

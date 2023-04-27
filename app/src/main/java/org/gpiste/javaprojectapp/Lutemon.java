@@ -1,5 +1,7 @@
 package org.gpiste.javaprojectapp;
 
+import java.util.Date;
+
 public class Lutemon {
     private String name;
     private String color;
@@ -45,5 +47,21 @@ public class Lutemon {
         return id;
     }
 
+    public void attack(Lutemon target) {
+        int damage = calculateDamage();
+        target.defense(damage);
+    }
+
+    public int calculateDamage() {
+        int minDamage = (int) (0.5 * attack);
+        int maxDamage = (int) (1.5 * attack);
+        int damage = (int) (Math.random()*(maxDamage - minDamage + 1)) + minDamage;
+        return damage;
+    }
+
+    public void defense(int damage) {
+        int actualDamage = Math.max(0, damage - defense);
+        health = actualDamage;
+    }
 
 }

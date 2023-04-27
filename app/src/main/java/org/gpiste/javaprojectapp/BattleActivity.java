@@ -3,7 +3,6 @@ package org.gpiste.javaprojectapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
 public class BattleActivity extends AppCompatActivity {
 
     @Override
