@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddLutemonActivity">
+<<<<<<< HEAD
 
         <EditText
             android:id="@+id/editTextText"
@@ -17,4 +18,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+=======
+>>>>>>> dd958dd6e73a631e444dc533ed472d5b2f920ac6
 </androidx.constraintlayout.widget.ConstraintLayout>
