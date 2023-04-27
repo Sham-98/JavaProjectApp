@@ -29,28 +29,28 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txt2"
+            android:id="@+id/txtAttack"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:text="Attack: "
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/txt3"
+            android:id="@+id/txtDefense"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Defense: "
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/txt4"
+            android:id="@+id/txtHealth"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:text="Health"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/txt5"
+            android:id="@+id/txtExperience"
             android:layout_width="match_parent"
             android:layout_height="76dp"
             android:text="Experience:"
