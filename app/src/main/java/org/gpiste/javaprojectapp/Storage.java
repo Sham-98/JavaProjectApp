@@ -26,6 +26,10 @@ public class Storage {
         Battle = new ArrayList<>();
     }
 
+    public void addLutemon(Lutemon lutemon) {
+        Home.add(lutemon);
+    }
+
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> fromList, ArrayList<Lutemon> toList) {
         if (fromList.remove(lutemon)) {
             toList.add(lutemon);

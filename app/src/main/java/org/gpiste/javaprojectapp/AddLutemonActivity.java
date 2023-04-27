@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class AddLutemonActivity extends AppCompatActivity {
 
@@ -16,6 +17,13 @@ public class AddLutemonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_lutemon);
 
         EditTextName = findViewById(R.id.editTextName);
+    }
+
+    Toast toast;
+    private void makeToast(String string) {
+        if (toast != null) toast.cancel();
+        toast = Toast.makeText(getApplicationContext(), string, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void addLutemon(View view) {
@@ -42,8 +50,8 @@ public class AddLutemonActivity extends AppCompatActivity {
                 newLutemon = new Black(name);
                 break;
         }
-        //Storage.getInstance().addLutemon(newLutemon);
+        Storage.getInstance().addLutemon(newLutemon);
 
-        //Storage.getInstance().saveLutemons(this);
+        makeToast("Lisätty");
     }
 }

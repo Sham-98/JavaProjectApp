@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".AddLutemonActivity">
 
+        <Button
+            android:id="@+id/addLutemonButton"
+            android:layout_width="249dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="20dp"
+            android:onClick="addLutemon"
+            android:text="Lisää uusi Lutemon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName"
+            app:layout_constraintVertical_bias="0.045" />
+
         <EditText
             android:id="@+id/editTextName"
             android:layout_width="249dp"
@@ -16,20 +30,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/addLutemonButton"
-            android:layout_width="249dp"
-            android:layout_height="61dp"
-            android:layout_marginTop="20dp"
-            android:onClick="addLutemon"
-            android:text="Lisää uusi Lutemon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextName"
-            app:layout_constraintStart_toStartOf="@+id/editTextName"
-            app:layout_constraintTop_toBottomOf="@+id/editTextName"
-            app:layout_constraintVertical_bias="0.038" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.556" />
 
         <RadioGroup
             android:id="@+id/rgColor"
