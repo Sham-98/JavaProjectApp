@@ -42,8 +42,8 @@ public class AddLutemonActivity extends AppCompatActivity {
                 newLutemon = new Black(name);
                 break;
         }
-        Storage.getInstance().addLutemon(newLutemon);
+        //Storage.getInstance().addLutemon(newLutemon);
 
-        Storage.getInstance().saveLutemons(this);
+        //Storage.getInstance().saveLutemons(this);
     }
 }
