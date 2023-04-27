@@ -11,13 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ListLutemonAdapter extends RecyclerView.Adapter<ListLutemonAdapter.ListLutemonViewHolder> {
+public class ViewHolder extends RecyclerView.ViewHolder {
+    public ViewHolder(@NonNull View itemView) {
+        super(itemView);
+    }
 
-    private Context context;
-    private ArrayList<Lutemon> lutemons;
-    private LayoutInflater inflater;
-
-    public ListLutemonAdapter(Context context, ArrayList<Lutemon> lutemons) {
+    /*public ListLutemonAdapter(Context context, ArrayList<Lutemon> lutemons) {
         this.context = context;
         this.lutemons = lutemons;
         inflater = LayoutInflater.from(context);
@@ -53,5 +52,5 @@ public class ListLutemonAdapter extends RecyclerView.Adapter<ListLutemonAdapter.
             super(lutemonView);
             nameTextView = lutemonView.findViewById(R.id.nameTextView);
         }
-    }
+    }*/
 }
