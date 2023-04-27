@@ -1,7 +1,7 @@
 package org.gpiste.javaprojectapp;
 
-/*public class battleField extends Storage {
-    public void battle(Lutemon a, Lutemon b) {
+public class BattleField extends Storage {
+    public void fight(Lutemon a, Lutemon b) {
         System.out.println("Taistelu alkaa!");
         System.out.println(a.getName() + " att: " + a.getAttack() + "; def: " + a.getDefense() + "; exp: " + a.getExperience() + "; health: " + a.getHealth() + "/" + a.getMaxHealth());
         System.out.println(b.getName() + " att: " + b.getAttack() + "; def: " + b.getDefense() + "; exp: " + b.getExperience() + "; health: " + b.getHealth() + "/" + b.getMaxHealth());
@@ -23,4 +23,4 @@ package org.gpiste.javaprojectapp;
 
         System.out.println("Taistelu on ohi!");
     }
-}*/
+}
