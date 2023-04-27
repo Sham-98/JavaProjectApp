@@ -56,6 +56,8 @@ public class Storage {
     }
 
     public Object getLutemonList() {
+
+        return null;
     }
     // -- tähän asti 25.04 - Annika
 }
