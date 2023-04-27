@@ -1,13 +1,20 @@
 package org.gpiste.javaprojectapp;
 
+import android.view.LayoutInflater;
+
 import android.content.Context;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
 
-public class ListLutemonAdapter extends RecyclerView.Adapter {
+public class ListLutemonAdapter extends RecyclerView.Adapter<ListLutemonAdapter.LutemonViewHolder> {
+    private final Context context;
+    private final List<Lutemon> lutemonList;
     public ListLutemonAdapter(Context applicationContext, Object lutemonList) {
+        this.context = context;
+        this.lutemonList = lutemonList;
     }
 
     @NonNull
@@ -23,6 +30,5 @@ public class ListLutemonAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lutemonList.size();
     }
-}
