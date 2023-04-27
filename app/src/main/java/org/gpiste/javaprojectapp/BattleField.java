@@ -1,4 +1,5 @@
 package org.gpiste.javaprojectapp;
+
 /*public class battleField extends Storage {
     public void battle(Lutemon a, Lutemon b) {
         System.out.println("Taistelu alkaa!");

@@ -9,6 +9,9 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Storage {
+
+}
+/*public class Storage {
     private static Storage storage = null;
     private ArrayList<Lutemon> Home;
     private ArrayList<Lutemon> Training;
@@ -36,4 +39,4 @@ public class Storage {
         }
     }
 
-}
+}*/

@@ -50,7 +50,10 @@ public class AddLutemonActivity extends AppCompatActivity {
                 newLutemon = new Black(name);
                 break;
         }
-        Storage.getInstance().addLutemon(newLutemon);
+        //Storage.getInstance().addLutemon(newLutemon);
+
+        Home home = new Home();
+        home.addLutemon(newLutemon);
 
         makeToast("Lisätty");
     }
