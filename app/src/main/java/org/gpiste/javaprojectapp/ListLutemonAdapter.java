@@ -25,18 +25,13 @@ public class ListLutemonAdapter extends RecyclerView.Adapter<ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.lutemonview, parent, false));
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    holder.Name.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");
-    //holder.Color.setText(lutemons.get(position).getColor() + " (" + lutemons.get(position).getId()+ " (");
-    holder.Attack.setText(lutemons.get(position).getAttack() + " (" + lutemons.get(position).getId()+ " (");
-    holder.Defense.setText(lutemons.get(position).getDefense() + " (" + lutemons.get(position).getId()+ " (");
-    holder.Experience.setText(lutemons.get(position).getExperience() + " (" + lutemons.get(position).getId()+ " (");
-    holder.Health.setText(lutemons.get(position).getHealth() + " (" + lutemons.get(position).getId()+ " (");
-    //holder.Maxhealth.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");holder.Name.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");
-    //holder..setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");holder.Name.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");
-
+        holder.Name.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getColor() + ")");
+        holder.Attack.setText("Hyökkays: " + lutemons.get(position).getAttack());
+        holder.Defense.setText("Puolustus: " + lutemons.get(position).getDefense());
+        holder.MaxHealth.setText("Elämä: " + "/" + lutemons.get(position).getMaxHealth());
+        holder.Experience.setText("Komemus: " + lutemons.get(position).getExperience());
     }
 
     @Override

@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
+    android:layout_height="170dp"
+    android:layout_margin="12dp"
+    android:layout_marginTop="10dp"
     android:background="#F4DC07"
     android:orientation="horizontal">
 
@@ -16,14 +17,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="265dp"
+        android:layout_height="170dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="47dp"
             android:text="Name:"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -31,28 +32,28 @@
         <TextView
             android:id="@+id/txtAttack"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="30dp"
             android:text="Attack: "
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txtDefense"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:text="Defense: "
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txtHealth"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="30dp"
             android:text="Health"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txtExperience"
             android:layout_width="match_parent"
-            android:layout_height="76dp"
+            android:layout_height="30dp"
             android:text="Experience:"
             android:textSize="16sp" />
 

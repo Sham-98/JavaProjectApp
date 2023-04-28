@@ -26,6 +26,9 @@ public class Storage {
         home.add(lutemon);
     }
 
+    public ArrayList<Lutemon> getHome() {
+        return home;
+    }
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> fromList, ArrayList<Lutemon> toList) {
         if (fromList.remove(lutemon)) {
             toList.add(lutemon);

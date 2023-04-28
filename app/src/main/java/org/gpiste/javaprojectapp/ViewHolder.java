@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     ImageView imageView;
-    TextView Name, Attack, Defense, Health, Experience;
+    TextView Name, Attack, Defense, MaxHealth, Experience;
 
 
     public ViewHolder(@NonNull View itemView) {
@@ -23,7 +23,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         Name = itemView.findViewById(R.id.txtName);
         Attack = itemView.findViewById(R.id.txtAttack);
         Defense = itemView.findViewById(R.id.txtDefense);
-        Health = itemView.findViewById(R.id.txtHealth);
+        MaxHealth = itemView.findViewById(R.id.txtHealth);
         Experience = itemView.findViewById(R.id.txtExperience);
     }
 

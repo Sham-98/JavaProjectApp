@@ -1,6 +1,7 @@
 package org.gpiste.javaprojectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,4 +34,25 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(this, );
         //startActivity(intent);
     }
+
+    private View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Fragment fragment;
+
+            switch (view.getId()) {
+                case R.id.MoveLutemonsButton:
+                    Intent intent = new Intent(view.getContext(), FragmentActivity.class);
+                    startActivity(intent);
+                    return;
+                default:
+                    fragment = new Fragment();
+                    break;
+            }
+
+            /*getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame, fragment)
+                    .commit();*/
+        }
+    };
 }
