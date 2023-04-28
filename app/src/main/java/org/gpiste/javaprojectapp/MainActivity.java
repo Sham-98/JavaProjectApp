@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            /*getSupportFragmentManager().beginTransaction()
+            getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame, fragment)
-                    .commit();*/
+                    .commit();
         }
     };
 }
