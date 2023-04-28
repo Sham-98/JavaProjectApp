@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button fragment = findViewById(R.id.MoveLutemonsButton);
+
+        fragment.setOnClickListener(listener);
     }
 
     public void switchToAddLutemon (View view) {
@@ -24,12 +29,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ListLutemonActivity.class);
         startActivity(intent);
     }
-
-    public void switchToMoveLutemons(View view) {
-        //Intent intent = new Intent(this, );
-        //startActivity(intent);
-    }
-
     public void switchToFight(View view) {
         //Intent intent = new Intent(this, );
         //startActivity(intent);
