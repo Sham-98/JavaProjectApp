@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pinky (pinkki)"
-        app:layout_constraintBottom_toTopOf="@+id/Box2"
+        app:layout_constraintBottom_toTopOf="@+id/box2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <CheckBox
-        android:id="@+id/Box4"
+        android:id="@+id/box4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="432dp"
@@ -46,20 +46,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/Box3"
+        android:id="@+id/box3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
         android:text="Trumpetti (Oranssi)"
-        app:layout_constraintBottom_toBottomOf="@+id/Box4"
+        app:layout_constraintBottom_toBottomOf="@+id/box4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Box2"
+        app:layout_constraintTop_toBottomOf="@+id/box2"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
-        android:id="@+id/Box2"
+        android:id="@+id/box2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mustis (Musta)"
