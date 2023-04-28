@@ -50,20 +50,16 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     @Override
     public int getItemCount() {
-        return 0;
-    }
-
-    @Override
-    public int getLutemonCount() {
         return lutemons.size();
     }
+
 
     public class ListLutemonViewHolder extends RecyclerView.ViewHolder {
         public TextView nameTextView;
 
         public ListLutemonViewHolder(@NonNull View lutemonView) {
             super(lutemonView);
-            nameTextView = lutemonView.findViewById(R.id.nameTextView);
+            nameTextView = lutemonView.findViewById(R.id.lista1);
         }
     }*/
 }
