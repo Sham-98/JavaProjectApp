@@ -34,6 +34,7 @@ public class ListLutemonAdapter extends RecyclerView.Adapter<ViewHolder> {
     holder.Defense.setText(lutemons.get(position).getDefense() + " (" + lutemons.get(position).getId()+ " (");
     holder.Experience.setText(lutemons.get(position).getExperience() + " (" + lutemons.get(position).getId()+ " (");
     holder.Health.setText(lutemons.get(position).getHealth() + " (" + lutemons.get(position).getId()+ " (");
+    holder.lutemonImage.setImageResource(lutemons.get(position).getImage());
     //holder.Maxhealth.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");holder.Name.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");
     //holder..setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");holder.Name.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getId()+ " (");
 
