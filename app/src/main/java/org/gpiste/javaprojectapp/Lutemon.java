@@ -1,8 +1,9 @@
 package org.gpiste.javaprojectapp;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Lutemon {
+public class Lutemon implements Serializable {
     private String name;
     private String color;
     private int attack;
@@ -11,6 +12,8 @@ public class Lutemon {
     private int health;
     private int maxHealth;
     private int id;
+
+    protected int image;
 
     public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int id) {
         this.name = name;
@@ -45,6 +48,10 @@ public class Lutemon {
     }
     public int getId() {
         return id;
+    }
+
+    public int getImage(){
+        return image;
     }
 
     public void attack(Lutemon target) {

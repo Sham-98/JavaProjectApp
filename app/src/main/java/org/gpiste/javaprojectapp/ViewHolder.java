@@ -1,25 +1,19 @@
 package org.gpiste.javaprojectapp;
 
-import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-
 public class ViewHolder extends RecyclerView.ViewHolder {
-    ImageView imageView;
+    ImageView lutemonImage;
     TextView Name, Attack, Defense, MaxHealth, Experience;
-
 
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
-        imageView = itemView.findViewById(R.id.imageView);
+        lutemonImage = itemView.findViewById(R.id.ivLutemonImage);
         Name = itemView.findViewById(R.id.txtName);
         Attack = itemView.findViewById(R.id.txtAttack);
         Defense = itemView.findViewById(R.id.txtDefense);
