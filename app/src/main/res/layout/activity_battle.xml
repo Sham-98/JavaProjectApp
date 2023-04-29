@@ -22,52 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.058" />
 
-    <CheckBox
-        android:id="@+id/box1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pinky (pinkki)"
-        app:layout_constraintBottom_toTopOf="@+id/box2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <CheckBox
-        android:id="@+id/box4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="432dp"
-        android:text="Oras (Vihreä)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/box3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="112dp"
-        android:text="Trumpetti (Oranssi)"
-        app:layout_constraintBottom_toBottomOf="@+id/box4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/box2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/box2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mustis (Musta)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="153dp" />
-
     <Button
         android:id="@+id/Fight"
         android:layout_width="161dp"
@@ -77,5 +31,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
+        app:layout_constraintVertical_bias="0.56" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <CheckBox
+            android:id="@+id/MycheckBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eka checkbox"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/MycheckBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toka checkbox"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/MycheckBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kolmas checkbox"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/MycheckBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Näljäs checkbox"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/MycheckBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viides checkbox"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/MycheckBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kuudes checkbox"
+            android:visibility="invisible" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="top|left"
     tools:context=".fragments.BattleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        android:text="Siirrä kohteeseen" />
-
     <RadioGroup
-        android:layout_width="180dp"
+        android:id="@+id/rgGroup"
+        android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:id="@+id/rgPlace">
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp">
 
         <RadioButton
-            android:id="@+id/rgKoti"
+            android:id="@+id/rbHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Kotiin" />
 
         <RadioButton
-            android:id="@+id/rgTraning"
+            android:id="@+id/rbWork"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Treenaamaan" />
 
         <RadioButton
-            android:id="@+id/rgBattle"
+            android:id="@+id/rbBattle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Taistelemaan" />
+            android:text="Taisteluun" />
+
     </RadioGroup>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/Buttonmove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siirrä Lutemoneja"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="160dp"/>
+
+    <!-- TODO: Update blank fragment layout -->
+
+</LinearLayout>

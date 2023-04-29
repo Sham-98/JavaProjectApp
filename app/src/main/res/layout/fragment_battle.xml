@@ -1,43 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.BattleFragment">
+    tools:context=".fragments.BattleFragment"
+    android:orientation="vertical"
+    android:id="@+id/battle_layout">
 
     <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        android:text="Siirrä kohteeseen" />
 
-    <RadioGroup
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:id="@+id/rgPlace">
-
-        <RadioButton
-            android:id="@+id/rgKoti"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kotiin" />
-
-        <RadioButton
-            android:id="@+id/rgTraning"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Treenaamaan" />
-
-        <RadioButton
-            android:id="@+id/rgBattle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Taistelemaan" />
-    </RadioGroup>
-
-</FrameLayout>
+</LinearLayout>

@@ -18,10 +18,6 @@ public class BattleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle);
-        box1 = findViewById(R.id.box1);
-        box2 = findViewById(R.id.box2);
-        box3 = findViewById(R.id.box3);
-        box4 = findViewById(R.id.box4);
         Fight = findViewById(R.id.Fight);
         textView = findViewById(R.id.textView);
 

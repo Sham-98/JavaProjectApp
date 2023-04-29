@@ -7,14 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 
+import org.gpiste.javaprojectapp.Lutemon;
 import org.gpiste.javaprojectapp.R;
+import org.gpiste.javaprojectapp.Storage;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link WorkoutFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
 public class WorkoutFragment extends Fragment {
 
     @Override
@@ -24,12 +24,22 @@ public class WorkoutFragment extends Fragment {
 
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_workout, container, false);
+
+        LinearLayout homelayout = view.findViewById(R.id.work_layout);
+
+        ArrayList<Lutemon> lutemons = Storage.getInstance().getTraining();
+
+        for (Lutemon lutemon : lutemons) {
+            CheckBox checkBox = new CheckBox(getContext());
+            checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
+
+            homelayout.addView(checkBox);
+        }
 
         return view;
     }

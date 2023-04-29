@@ -29,6 +29,14 @@ public class Storage {
     public ArrayList<Lutemon> getHome() {
         return home;
     }
+
+    public ArrayList<Lutemon> getTraining() {
+        return training;
+    }
+
+    public ArrayList<Lutemon> getBattle() {
+        return battle;
+    }
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> fromList, ArrayList<Lutemon> toList) {
         if (fromList.remove(lutemon)) {
             toList.add(lutemon);
