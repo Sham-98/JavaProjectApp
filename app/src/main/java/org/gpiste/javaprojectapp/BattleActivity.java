@@ -34,5 +34,11 @@ public class BattleActivity extends AppCompatActivity {
                 String Box4 = box4.getText().toString();
             }
         });
+        Fight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
     }
 }
