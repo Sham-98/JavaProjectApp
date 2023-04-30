@@ -26,7 +26,10 @@ public class HomeFragment extends Fragment {
     RadioGroup radioGroup;
     private Button moveButton;
     private ArrayList<Lutemon> selectedList = null;
-    ArrayList<CheckBox> checkBoxes;
+    //ArrayList<CheckBox> checkBoxes;
+
+    private ArrayList<Lutemon> lutemons;
+    private ArrayList<CheckBox> checkBoxes;
     //ArrayList<Lutemon> selectedList;
 
     @Override
@@ -44,10 +47,20 @@ public class HomeFragment extends Fragment {
 
         LinearLayout linearLayoutHome1 = view.findViewById(R.id.linearLayoutHome1);
 
-        ArrayList<Lutemon> lutemons = Storage.getInstance().getHome();
+        //ArrayList<Lutemon> lutemons = Storage.getInstance().getHome();
+
+        lutemons = Storage.getInstance().getHome();
+        checkBoxes = new ArrayList<>();
+
+        for (Lutemon lutemon : lutemons) {
+            CheckBox checkBox = new CheckBox(getContext());
+            checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
+            checkBoxes.add(checkBox);
+            linearLayoutHome1.addView(checkBox);
+
+        }
 
         radioGroup = view.findViewById(R.id.rgGroupHome);
-
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -68,44 +81,41 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        checkBoxes = new ArrayList<>();
-
-        for (Lutemon lutemon : lutemons) {
-            CheckBox checkBox = new CheckBox(getContext());
-            checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
-            checkBoxes.add(checkBox);
-            linearLayoutHome1.addView(checkBox);
-
-        }
-
         moveButton = view.findViewById(R.id.moveButtonHome);
-
         moveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (CheckBox checkBox : checkBoxes) {
-                    if (checkBox.isChecked()) {
-                        Lutemon lutemon = lutemons.get(checkBoxes.indexOf(checkBox));
-                        Storage.getInstance().moveLutemon(lutemon, Storage.getInstance().getHome(), selectedList);
+                ArrayList<Lutemon> selectedLutemons = new ArrayList<>();
+                for (int i = 0; i < lutemons.size(); i++) {
+                    if (checkBoxes.get(i).isChecked()) {
+                        selectedLutemons.add(lutemons.get(i));
                     }
                 }
-                //updateUI();
+                moveSelectedLutemons(selectedLutemons);
             }
         });
 
         return view;
     }
 
-    /*private void updateUI() {
-        linearLayoutHome1.removeAllViews();
+    private void moveSelectedLutemons(ArrayList<Lutemon> lutemons) {
+        for (Lutemon lutemon : lutemons) {
+            Storage.getInstance().moveLutemon(lutemon, Storage.getInstance().getHome(), selectedList);
+        }
+        updateView();
+    }
 
+    private void updateView() {
+        LinearLayout linearLayoutHome1 = getView().findViewById(R.id.linearLayoutHome1);
+        linearLayoutHome1.removeAllViews();
         lutemons = Storage.getInstance().getHome();
-        checkBoxes = new ArrayList<>();
+        checkBoxes.clear(); // Poista aiemmin lisätyt valintaruudut
         for (Lutemon lutemon : lutemons) {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
             checkBoxes.add(checkBox);
             linearLayoutHome1.addView(checkBox);
         }
-    }*/
+    }
+
 }

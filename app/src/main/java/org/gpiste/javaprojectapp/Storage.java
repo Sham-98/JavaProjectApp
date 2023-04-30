@@ -37,9 +37,9 @@ public class Storage {
         return battle;
     }
 
-    public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> sourceList, ArrayList<Lutemon> targetList) {
-        if (sourceList.remove(lutemon)) {
-            targetList.add(lutemon);
+    public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> List1, ArrayList<Lutemon> List2) {
+        if (List1.remove(lutemon)) {
+            List2.add(lutemon);
         }
     }
 
