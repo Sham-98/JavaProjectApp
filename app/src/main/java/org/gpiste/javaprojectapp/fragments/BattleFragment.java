@@ -17,12 +17,6 @@ import org.gpiste.javaprojectapp.Storage;
 import java.util.ArrayList;
 public class BattleFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
-    public BattleFragment() {
-        // Required empty public constructor
-    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

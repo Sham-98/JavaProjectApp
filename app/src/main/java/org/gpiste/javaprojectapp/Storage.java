@@ -38,7 +38,7 @@ public class Storage {
     }
 
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> List1, ArrayList<Lutemon> List2) {
-        if (List1.remove(lutemon)) {
+        if (List1 != null && List2 != null && List1.remove(lutemon)) {
             List2.add(lutemon);
         }
     }

@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import org.gpiste.javaprojectapp.Lutemon;
 import org.gpiste.javaprojectapp.R;
@@ -81,13 +82,23 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ArrayList<Lutemon> selectedLutemons = new ArrayList<>();
-                for (int i = 0; i < lutemons.size(); i++) {
+                boolean radioButtonChecked = radioGroup.getCheckedRadioButtonId() != -1;
+
+                if (!radioButtonChecked) {
+                    return;
+                }
+
+                for (int i = 0; i < Math.min(checkBoxes.size(), lutemons.size()); i++) {
                     if (checkBoxes.get(i).isChecked()) {
                         selectedLutemons.add(lutemons.get(i));
                     }
                 }
-                moveSelectedLutemons(selectedLutemons);
+                if (!selectedLutemons.isEmpty()) {
+                    moveSelectedLutemons(selectedLutemons);
+                    radioGroup.clearCheck();
+                }
             }
+
         });
 
         return view;
