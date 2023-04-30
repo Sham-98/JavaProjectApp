@@ -106,12 +106,12 @@ public class HomeFragment extends Fragment {
         lutemons = Storage.getInstance().getHome();
         checkBoxes.clear();
 
-        /*for (Lutemon lutemon : lutemons) {
+        for (Lutemon lutemon : lutemons) {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
             checkBoxes.add(checkBox);
             linearLayoutHome1.addView(checkBox);
-        }*/
+        }
     }
 
 }
