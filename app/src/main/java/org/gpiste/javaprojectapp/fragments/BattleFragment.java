@@ -38,7 +38,7 @@ public class BattleFragment extends Fragment {
 
         LinearLayout homelayout = view.findViewById(R.id.battle_layout);
 
-        ArrayList<Lutemon> lutemons = Storage.getInstance().getBattle();
+        ArrayList<Lutemon> lutemons = Storage.getInstance().getHome();
 
         for (Lutemon lutemon : lutemons) {
             CheckBox checkBox = new CheckBox(getContext());
