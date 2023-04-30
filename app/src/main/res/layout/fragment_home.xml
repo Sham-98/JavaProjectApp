@@ -9,25 +9,18 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RVHome"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="500dp"
         android:orientation="vertical">
 
         <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/homeChecbox">
+            android:id="@+id/homeChecbox"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="300dp">
 
         </CheckBox>
 
@@ -36,8 +29,8 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
         android:orientation="vertical">
 
         <RadioGroup

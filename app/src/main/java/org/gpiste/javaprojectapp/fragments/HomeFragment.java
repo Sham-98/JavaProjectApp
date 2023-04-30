@@ -34,6 +34,8 @@ public class HomeFragment extends Fragment {
 
         ArrayList<Lutemon> lutemons = Storage.getInstance().getHome();
 
+
+
         return view;
     }
 }
