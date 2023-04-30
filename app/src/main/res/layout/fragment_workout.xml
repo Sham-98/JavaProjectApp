@@ -26,7 +26,7 @@
         android:orientation="vertical">
 
         <RadioGroup
-            android:id="@+id/rgGroupHome"
+            android:id="@+id/rgGroupWorkout"
             android:layout_width="match_parent"
             android:layout_marginLeft="80dp"
             android:layout_height="140dp">

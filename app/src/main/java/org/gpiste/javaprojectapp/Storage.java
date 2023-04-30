@@ -15,7 +15,6 @@ public class Storage {
         return storage;
     }
 
-    // public vai private??
     public Storage() {
         home = new ArrayList<>();
         training = new ArrayList<>();
@@ -37,9 +36,11 @@ public class Storage {
     public ArrayList<Lutemon> getBattle() {
         return battle;
     }
-    public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> fromList, ArrayList<Lutemon> toList) {
-        if (fromList.remove(lutemon)) {
-            toList.add(lutemon);
+
+    public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> sourceList, ArrayList<Lutemon> targetList) {
+        if (sourceList.remove(lutemon)) {
+            targetList.add(lutemon);
         }
     }
+
 }
