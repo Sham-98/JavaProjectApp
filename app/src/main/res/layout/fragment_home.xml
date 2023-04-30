@@ -14,18 +14,22 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        tools:listitem="@layout/fragment_home">
-
+        android:orientation="vertical">
 
     </androidx.recyclerview.widget.RecyclerView>
-
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/homeChecbox">
+
+        </CheckBox>
 
     </LinearLayout>
 
