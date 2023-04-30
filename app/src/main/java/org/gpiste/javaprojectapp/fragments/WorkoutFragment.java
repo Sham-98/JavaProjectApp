@@ -30,7 +30,7 @@ public class WorkoutFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_workout, container, false);
 
-        LinearLayout homelayout = view.findViewById(R.id.work_layout);
+        LinearLayout linearLayoutWorkout1 = view.findViewById(R.id.linearLayoutWorkout1);
 
         ArrayList<Lutemon> lutemons = Storage.getInstance().getTraining();
 
@@ -38,9 +38,10 @@ public class WorkoutFragment extends Fragment {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
 
-            homelayout.addView(checkBox);
+            linearLayoutWorkout1.addView(checkBox);
         }
 
         return view;
+
     }
 }

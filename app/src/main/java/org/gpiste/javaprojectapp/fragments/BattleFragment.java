@@ -36,15 +36,15 @@ public class BattleFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_battle, container, false);
 
-        LinearLayout homelayout = view.findViewById(R.id.battle_layout);
+        LinearLayout linearLayoutBattle1 = view.findViewById(R.id.linearLayoutBattle1);
 
-        ArrayList<Lutemon> lutemons = Storage.getInstance().getHome();
+        ArrayList<Lutemon> lutemons = Storage.getInstance().getBattle();
 
         for (Lutemon lutemon : lutemons) {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
 
-            homelayout.addView(checkBox);
+            linearLayoutBattle1.addView(checkBox);
         }
 
         return view;

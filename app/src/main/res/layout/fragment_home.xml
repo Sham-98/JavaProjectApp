@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    tools:context=".fragments.HomeFragment"
+    android:orientation="vertical"
+    android:id="@+id/Home_layout">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/linearLayoutHome1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:layout_marginBottom="500dp"
         android:orientation="vertical">
-
-        <CheckBox
-            android:id="@+id/homeChecbox"
-            android:layout_width="143dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="300dp">
-
-        </CheckBox>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayoutHome2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
@@ -36,6 +28,7 @@
         <RadioGroup
             android:id="@+id/rgGroupHome"
             android:layout_width="match_parent"
+            android:layout_marginLeft="80dp"
             android:layout_height="140dp">
 
             <RadioButton
