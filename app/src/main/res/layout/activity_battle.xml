@@ -48,42 +48,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Eka checkbox"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <CheckBox
             android:id="@+id/MycheckBox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Toka checkbox"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <CheckBox
             android:id="@+id/MycheckBox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kolmas checkbox"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <CheckBox
             android:id="@+id/MycheckBox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Näljäs checkbox"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <CheckBox
             android:id="@+id/MycheckBox5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Viides checkbox"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <CheckBox
             android:id="@+id/MycheckBox6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kuudes checkbox"
-            android:visibility="invisible" />
+            android:visibility="visible" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
