@@ -26,11 +26,8 @@ public class HomeFragment extends Fragment {
     RadioGroup radioGroup;
     private Button moveButton;
     private ArrayList<Lutemon> selectedList = null;
-    //ArrayList<CheckBox> checkBoxes;
-
     private ArrayList<Lutemon> lutemons;
     private ArrayList<CheckBox> checkBoxes;
-    //ArrayList<Lutemon> selectedList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,8 +43,6 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         LinearLayout linearLayoutHome1 = view.findViewById(R.id.linearLayoutHome1);
-
-        //ArrayList<Lutemon> lutemons = Storage.getInstance().getHome();
 
         lutemons = Storage.getInstance().getHome();
         checkBoxes = new ArrayList<>();
@@ -109,13 +104,14 @@ public class HomeFragment extends Fragment {
         LinearLayout linearLayoutHome1 = getView().findViewById(R.id.linearLayoutHome1);
         linearLayoutHome1.removeAllViews();
         lutemons = Storage.getInstance().getHome();
-        checkBoxes.clear(); // Poista aiemmin lisätyt valintaruudut
-        for (Lutemon lutemon : lutemons) {
+        checkBoxes.clear();
+
+        /*for (Lutemon lutemon : lutemons) {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
             checkBoxes.add(checkBox);
             linearLayoutHome1.addView(checkBox);
-        }
+        }*/
     }
 
 }
