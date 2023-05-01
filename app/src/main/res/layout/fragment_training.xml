@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".fragments.TrainingFragment"
     android:orientation="vertical"
-    android:id="@+id/work_layout">
+    android:id="@+id/work_layout"
+    tools:ignore="MissingDefaultResource">
 
     <!-- TODO: Update blank fragment layout -->
 
