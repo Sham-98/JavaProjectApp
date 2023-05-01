@@ -102,9 +102,7 @@ public class BattleFragment extends Fragment {
                     radioGroup.clearCheck();
                 }
             }
-
         });
-
         return view;
     }
 

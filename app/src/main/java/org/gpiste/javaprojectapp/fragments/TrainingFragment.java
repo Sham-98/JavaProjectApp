@@ -108,6 +108,9 @@ public class TrainingFragment extends Fragment {
         for (Lutemon lutemon : lutemons) {
             Storage.getInstance().moveLutemon(lutemon, Storage.getInstance().getTraining(), selectedList);
         }
+        for (Lutemon selectedLutemon : lutemons) {
+            selectedLutemon.gainExperience(1);
+        }
         updateView();
     }
 
