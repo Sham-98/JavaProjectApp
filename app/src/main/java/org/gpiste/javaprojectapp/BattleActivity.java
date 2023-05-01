@@ -6,13 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class BattleActivity extends AppCompatActivity {
-    CheckBox box1, box2, box3, box4;
     Button Fight;
     TextView textView;
 
+    RadioGroup radioGroup;
+    private Button fightButton;
+    private ArrayList<Lutemon> lutemons;
+    private ArrayList<CheckBox> checkBoxes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,20 +28,22 @@ public class BattleActivity extends AppCompatActivity {
         Fight = findViewById(R.id.Fight);
         textView = findViewById(R.id.textView);
 
-        Fight.setOnClickListener(new View.OnClickListener() {
+        checkBoxes = new ArrayList<>();
+
+        LinearLayout linearLayoutBattleActivity = findViewById(R.id.battleActivityLinearLayout1);
+        for (Lutemon lutemon : lutemons) {
+            CheckBox checkBox = new CheckBox((this));
+            checkBox.setText(lutemon.getName() + "(" + lutemon.getColor() + ")");
+            checkBox.setTag(lutemon);
+            linearLayoutBattleActivity.addView(checkBox);
+            checkBoxes.add(checkBox);
+        }
+
+        fightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Box1 = box1.getText().toString();
-                String Box2 = box2.getText().toString();
-                String Box3 = box3.getText().toString();
-                String Box4 = box4.getText().toString();
-            }
-        });
-        Fight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
 
+            }
+        });
     }
 }
