@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void switchToFight(View view) {
-        //Intent intent = new Intent(this, );
-        //startActivity(intent);
+        Intent intent = new Intent(this, BattleActivity.class);
+        startActivity(intent);
     }
 
     private View.OnClickListener listener = new View.OnClickListener() {
