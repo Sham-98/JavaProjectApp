@@ -57,7 +57,7 @@ public class BattleActivity extends AppCompatActivity {
                     }
                 }
 
-                fightButton.setText("Button was clicked");
+                //fightButton.setText("Button was clicked");
                 //battleResultTextView.setText("Text");
 
                 if (selectedLutemonCount == 2) {

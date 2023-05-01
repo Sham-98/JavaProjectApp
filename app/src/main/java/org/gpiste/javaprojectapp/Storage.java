@@ -14,7 +14,6 @@ public class Storage {
         }
         return storage;
     }
-
     public Storage() {
         home = new ArrayList<>();
         training = new ArrayList<>();
@@ -37,6 +36,10 @@ public class Storage {
         return battle;
     }
 
+    public void removeDeadLutemon(Lutemon lutemon) {
+        ArrayList<Lutemon> deadLutemon = new ArrayList<>();
+        battle.removeAll(deadLutemon);
+    }
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> List1, ArrayList<Lutemon> List2) {
         if (List1 != null && List2 != null && List1.remove(lutemon)) {
             List2.add(lutemon);

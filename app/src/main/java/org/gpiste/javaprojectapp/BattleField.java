@@ -29,11 +29,23 @@ public class BattleField extends Storage {
 
             battleResult += lutemonA.getName() + " attacked " + lutemonB.getName() + " and dealt " + damage + " damage.\n\n";
 
+            Lutemon temp = lutemonA;
+            lutemonA = lutemonB;
+            lutemonB = temp;
+
             if (lutemonB.getHealth() <= 0) {
                 battleResult += lutemonB.getName() + " died.\n";
                 lutemonA.gainExperience(1);
-                getBattle().remove(lutemonB);
+                removeDeadLutemon(lutemonB);
                 lutemonB = null;
+                break;
+            }
+
+            if (lutemonA.getHealth() <= 0) {
+                battleResult += lutemonA.getName() + " died.\n";
+                lutemonA.gainExperience(1);
+                removeDeadLutemon(lutemonA);
+                lutemonA = null;
                 break;
             }
         }
