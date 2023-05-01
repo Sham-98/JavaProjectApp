@@ -38,7 +38,7 @@ public class TrainingFragment extends Fragment {
 
         LinearLayout linearLayoutWorkout1 = view.findViewById(R.id.linearLayoutWorkout1);
 
-        lutemons = Storage.getInstance().getHome();
+        lutemons = Storage.getInstance().getTraining();
         checkBoxes = new ArrayList<>();
 
         for (Lutemon lutemon : lutemons) {
@@ -49,7 +49,7 @@ public class TrainingFragment extends Fragment {
 
         }
 
-        radioGroup = view.findViewById(R.id.rgGroupTraining);
+        radioGroup = view.findViewById(R.id.rgGroupWorkout);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -107,7 +107,7 @@ public class TrainingFragment extends Fragment {
     private void updateView() {
         LinearLayout linearLayoutWorkout1 = getView().findViewById(R.id.linearLayoutWorkout1);
         linearLayoutWorkout1.removeAllViews();
-        lutemons = Storage.getInstance().getHome();
+        lutemons = Storage.getInstance().getTraining();
         checkBoxes.clear();
 
         for (Lutemon lutemon : lutemons) {

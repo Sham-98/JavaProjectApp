@@ -19,7 +19,6 @@ import org.gpiste.javaprojectapp.Storage;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
-
     RadioGroup radioGroup;
     private Button moveButton;
     private ArrayList<Lutemon> selectedList = null;
