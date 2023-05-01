@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import org.gpiste.javaprojectapp.fragments.BattleFragment;
 import org.gpiste.javaprojectapp.fragments.HomeFragment;
-import org.gpiste.javaprojectapp.fragments.WorkoutFragment;
+import org.gpiste.javaprojectapp.fragments.TrainingFragment;
 
 public class FragmentPagerAdapter extends FragmentStateAdapter {
 
@@ -22,7 +22,7 @@ public class FragmentPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                return new WorkoutFragment();
+                return new TrainingFragment();
             case 2:
                 return new BattleFragment();
             default:

@@ -43,7 +43,7 @@ public class BattleFragment extends Fragment {
 
         LinearLayout linearLayoutBattle1 = view.findViewById(R.id.linearLayoutBattle1);
 
-        lutemons = Storage.getInstance().getHome();
+        lutemons = Storage.getInstance().getBattle();
         checkBoxes = new ArrayList<>();
 
         for (Lutemon lutemon : lutemons) {
@@ -112,7 +112,7 @@ public class BattleFragment extends Fragment {
     private void updateView() {
         LinearLayout linearLayoutBattle1 = getView().findViewById(R.id.linearLayoutBattle1);
         linearLayoutBattle1.removeAllViews();
-        lutemons = Storage.getInstance().getHome();
+        lutemons = Storage.getInstance().getBattle();
         checkBoxes.clear();
 
         for (Lutemon lutemon : lutemons) {
