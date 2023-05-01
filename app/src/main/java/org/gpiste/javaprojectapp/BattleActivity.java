@@ -71,4 +71,5 @@ public class BattleActivity extends AppCompatActivity {
             }
         });
     }
+
 }

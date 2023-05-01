@@ -1,5 +1,7 @@
 package org.gpiste.javaprojectapp;
 
+import android.widget.CheckBox;
+
 import java.util.ArrayList;
 public class Storage {
 
@@ -44,6 +46,3 @@ public class Storage {
             List2.add(lutemon);
         }
     }}
-
-
-
