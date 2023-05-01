@@ -1,5 +1,7 @@
 package org.gpiste.javaprojectapp;
 
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,50 +16,34 @@ public class BattleField extends Storage {
         String battleResult = "";
         while (lutemonA.getHealth() > 0 && lutemonB.getHealth() > 0) {
 
-            battleResult += lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
-            + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
-            + "/" + lutemonA.getMaxHealth() +"\n";
+            /*battleResult += lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
+                + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
+                + "/" + lutemonA.getMaxHealth() +"\n";*/
 
             System.out.println(lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
-            + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
-            + "/" + lutemonA.getMaxHealth());
+                    + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
+                    + "/" + lutemonA.getMaxHealth());
 
+            System.out.println(lutemonB.getName() + "(" + ") attack: " + lutemonB.getAttack() + "; def: "
+                    + lutemonB.getDefense() + "; exp: " + lutemonB.getExperience() + "; health: " + lutemonB.getHealth()
+                    + "/" + lutemonB.getMaxHealth());
 
-            if (lutemonB.getHealth() > 0) {
+            int damage = lutemonA.getAttack() + lutemonA.getExperience();
+            lutemonB.defende(damage);
 
-                battleResult += lutemonB.getName() + " manages to escape death.\n";
+            //battleResult += lutemonA.getName() + " attacked " + lutemonB.getName() + " and dealt " + damage + " damage.\n";
+            System.out.println(lutemonA.getName() + " attacked " + lutemonB.getName() + " and dealt " + damage + " damage.");
 
-                System.out.println(lutemonB.getName() + " manages to escape death.");
-
-                Lutemon temp = lutemonA;
-                lutemonA = lutemonB;
-                lutemonB = temp;
-            } else {
-
+            if (lutemonB.getHealth() <= 0) {
                 battleResult += lutemonB.getName() + " died.\n";
-
                 System.out.println(lutemonB.getName() + " died.");
-
                 lutemonA.gainExperience(1);
                 getBattle().remove(lutemonB);
                 lutemonB = null;
+                break;
             }
         }
-        if (lutemonA.getHealth() > 0) {
 
-            battleResult += lutemonB.getName() + " wom the battle\n";
-
-            System.out.println(lutemonA.getName() + " wom the battle");
-        } else {
-
-            battleResult += lutemonA.getName() + " lost the battle.\n";
-
-            System.out.println(lutemonA.getName() + " lost the battle.");
-
-            getBattle().remove(lutemonA);
-            lutemonA = null;
-        }
         return battleResult;
     }
-
 }

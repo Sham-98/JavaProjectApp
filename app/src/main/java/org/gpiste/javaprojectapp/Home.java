@@ -5,3 +5,4 @@ public class Home extends Storage {
         super();
     }
 }
+

@@ -55,10 +55,14 @@ public class Lutemon implements Serializable {
         return image;
     }
 
-    public int getExperiencePoints() {
-        return experiencePoints;
-    }
     public void gainExperience(int experiencePoints) {
         this.experiencePoints += experiencePoints;
+    }
+
+    public  void defende(int damage) {
+        int totalDamage = damage + this.defense;
+        if (totalDamage > 0) {
+            this.health -= totalDamage;
+        }
     }
 }

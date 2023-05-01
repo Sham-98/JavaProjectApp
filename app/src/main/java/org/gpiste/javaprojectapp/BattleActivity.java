@@ -50,14 +50,19 @@ public class BattleActivity extends AppCompatActivity {
                             selectedLutemonCount++;
                         } else if (selectedLutemonCount == 1) {
                             selectedLutemon2 = (Lutemon) checkBox.getTag();
+                            selectedLutemonCount++;
                         } else {
                             break;
                         }
                     }
                 }
 
+                fightButton.setText("Button was clicked");
+                //battleResultTextView.setText("Text");
+
                 if (selectedLutemonCount == 2) {
                     battleResultTextView.setText("");
+                    battleResultTextView.setText("Text");
                     BattleField battleField = new BattleField(Storage.getInstance().getBattle(),
                             lutemons.indexOf((selectedLutemon1)),
                             lutemons.indexOf(selectedLutemon2));
