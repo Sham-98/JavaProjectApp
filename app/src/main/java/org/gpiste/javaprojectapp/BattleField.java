@@ -39,7 +39,7 @@ public class BattleField extends Storage {
                 //System.out.println(lutemonB.getName() + " died.");
 
                 lutemonA.gainExperience(1);
-                getHome().remove(lutemonB);
+                getBattle().remove(lutemonB);
                 lutemonB = null;
             }
         }
@@ -54,7 +54,7 @@ public class BattleField extends Storage {
 
             //System.out.println(lutemonA.getName() + " lost the battle.");
 
-            getHome().remove(lutemonA);
+            getBattle().remove(lutemonA);
             lutemonA = null;
         }
         return battleResult;
