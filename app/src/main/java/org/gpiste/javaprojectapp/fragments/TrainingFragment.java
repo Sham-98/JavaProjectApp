@@ -34,9 +34,9 @@ public class TrainingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_training, container, false);
 
-        LinearLayout linearLayoutHome1 = view.findViewById(R.id.linearLayoutHome1);
+        LinearLayout linearLayoutWorkout1 = view.findViewById(R.id.linearLayoutWorkout1);
 
         lutemons = Storage.getInstance().getHome();
         checkBoxes = new ArrayList<>();
@@ -45,22 +45,22 @@ public class TrainingFragment extends Fragment {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
             checkBoxes.add(checkBox);
-            linearLayoutHome1.addView(checkBox);
+            linearLayoutWorkout1.addView(checkBox);
 
         }
 
-        radioGroup = view.findViewById(R.id.rgGroupHome);
+        radioGroup = view.findViewById(R.id.rgGroupTraining);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
                 switch (checkedId) {
-                    case R.id.radioButton:
+                    case R.id.radioButtonWorkout1:
                         selectedList = Storage.getInstance().getHome();
                         break;
-                    case R.id.radioButton2:
+                    case R.id.radioButtonWorkout2:
                         selectedList = Storage.getInstance().getTraining();
                         break;
-                    case R.id.radioButton3:
+                    case R.id.radioButtonWorkout3:
                         selectedList = Storage.getInstance().getBattle();
                         break;
                     default:
@@ -70,7 +70,7 @@ public class TrainingFragment extends Fragment {
             }
         });
 
-        moveButton = view.findViewById(R.id.moveButtonHome);
+        moveButton = view.findViewById(R.id.moveButtonTraining);
         moveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,8 +105,8 @@ public class TrainingFragment extends Fragment {
     }
 
     private void updateView() {
-        LinearLayout linearLayoutHome1 = getView().findViewById(R.id.linearLayoutHome1);
-        linearLayoutHome1.removeAllViews();
+        LinearLayout linearLayoutWorkout1 = getView().findViewById(R.id.linearLayoutWorkout1);
+        linearLayoutWorkout1.removeAllViews();
         lutemons = Storage.getInstance().getHome();
         checkBoxes.clear();
 
@@ -114,7 +114,7 @@ public class TrainingFragment extends Fragment {
             CheckBox checkBox = new CheckBox(getContext());
             checkBox.setText(lutemon.getName() + " (" + lutemon.getColor() + ")");
             checkBoxes.add(checkBox);
-            linearLayoutHome1.addView(checkBox);
+            linearLayoutWorkout1.addView(checkBox);
         }
     }
 
