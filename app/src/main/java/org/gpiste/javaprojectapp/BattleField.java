@@ -18,16 +18,16 @@ public class BattleField extends Storage {
             + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
             + "/" + lutemonA.getMaxHealth() +"\n";
 
-            /*System.out.println(lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
+            System.out.println(lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
             + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
-            + "/" + lutemonA.getMaxHealth());*/
+            + "/" + lutemonA.getMaxHealth());
 
 
             if (lutemonB.getHealth() > 0) {
 
                 battleResult += lutemonB.getName() + " manages to escape death.\n";
 
-                //System.out.println(lutemonB.getName() + " manages to escape death.");
+                System.out.println(lutemonB.getName() + " manages to escape death.");
 
                 Lutemon temp = lutemonA;
                 lutemonA = lutemonB;
@@ -36,7 +36,7 @@ public class BattleField extends Storage {
 
                 battleResult += lutemonB.getName() + " died.\n";
 
-                //System.out.println(lutemonB.getName() + " died.");
+                System.out.println(lutemonB.getName() + " died.");
 
                 lutemonA.gainExperience(1);
                 getBattle().remove(lutemonB);
@@ -47,12 +47,12 @@ public class BattleField extends Storage {
 
             battleResult += lutemonB.getName() + " wom the battle\n";
 
-            //System.out.println(lutemonA.getName() + " wom the battle");
+            System.out.println(lutemonA.getName() + " wom the battle");
         } else {
 
             battleResult += lutemonA.getName() + " lost the battle.\n";
 
-            //System.out.println(lutemonA.getName() + " lost the battle.");
+            System.out.println(lutemonA.getName() + " lost the battle.");
 
             getBattle().remove(lutemonA);
             lutemonA = null;
