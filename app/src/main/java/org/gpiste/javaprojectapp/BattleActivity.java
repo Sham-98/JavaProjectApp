@@ -68,8 +68,23 @@ public class BattleActivity extends AppCompatActivity {
                     String battleResult = battleField.startBattle();
                     battleResultTextView.setText(battleResult);
                 }
+             updateView();
             }
         });
+    }
+
+    private void updateView() {
+        LinearLayout linearLayoutBattleActivity = findViewById(R.id.battleActivityLinearLayout1);
+        linearLayoutBattleActivity.removeAllViews();
+        checkBoxes.clear();
+        lutemons = Storage.getInstance().getBattle();
+        for (Lutemon lutemon : lutemons) {
+            CheckBox checkBox = new CheckBox((this));
+            checkBox.setText(lutemon.getName() + "(" + lutemon.getColor() + ")");
+            checkBox.setTag(lutemon);
+            linearLayoutBattleActivity.addView(checkBox);
+            checkBoxes.add(checkBox);
+        }
     }
 
 }

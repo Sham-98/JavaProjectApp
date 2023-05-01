@@ -5,19 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".fragments.TrainingFragment"
     android:orientation="vertical"
-    android:id="@+id/work_layout"
-    tools:ignore="MissingDefaultResource">
+    android:id="@+id/work_layout">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
-        android:id="@+id/linearLayoutWorkout1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginBottom="500dp"
-        android:orientation="vertical">
+        android:layout_height="250dp">
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutWorkout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayoutWorkout2"

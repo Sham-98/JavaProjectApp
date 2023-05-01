@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class BattleField extends Storage {
     private Lutemon lutemonA;
     private Lutemon lutemonB;
+
     public BattleField(ArrayList<Lutemon> lutemons, int selectedLutemonA, int selectedLutemonB) {
         lutemonA = lutemons.get(selectedLutemonA);
         lutemonB = lutemons.get(selectedLutemonB);
@@ -38,6 +39,7 @@ public class BattleField extends Storage {
                 battleResult += lutemonB.getName() + " died.\n";
                 lutemonA.gainExperience(1);
                 getInstance().removeDeadLutemon(lutemonB);
+                getInstance().moveLutemon(lutemonA, getInstance().getBattle(), getInstance().getHome());
                 lutemonB = null;
                 break;
             }
@@ -46,6 +48,7 @@ public class BattleField extends Storage {
                 battleResult += lutemonA.getName() + " died.\n";
                 lutemonB.gainExperience(1);
                 getInstance().removeDeadLutemon(lutemonA);
+                getInstance().moveLutemon(lutemonB, getInstance().getBattle(), getInstance().getHome());
                 lutemonA = null;
                 break;
             }
