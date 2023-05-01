@@ -91,11 +91,6 @@ public class BattleFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ArrayList<Lutemon> selectedLutemons = new ArrayList<>();
-                boolean radioButtonChecked = radioGroup.getCheckedRadioButtonId() != -1;
-
-                if (!radioButtonChecked) {
-                    return;
-                }
 
                 for (int i = 0; i < Math.min(checkBoxes.size(), lutemons.size()); i++) {
                     if (checkBoxes.get(i).isChecked()) {
