@@ -62,7 +62,6 @@ public class BattleActivity extends AppCompatActivity {
 
                 if (selectedLutemonCount == 2) {
                     battleResultTextView.setText("");
-                    battleResultTextView.setText("Text");
                     BattleField battleField = new BattleField(Storage.getInstance().getBattle(),
                             lutemons.indexOf((selectedLutemon1)),
                             lutemons.indexOf(selectedLutemon2));

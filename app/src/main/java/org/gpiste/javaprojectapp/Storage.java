@@ -37,8 +37,7 @@ public class Storage {
     }
 
     public void removeDeadLutemon(Lutemon lutemon) {
-        ArrayList<Lutemon> deadLutemon = new ArrayList<>();
-        battle.removeAll(deadLutemon);
+        battle.remove(lutemon);
     }
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> List1, ArrayList<Lutemon> List2) {
         if (List1 != null && List2 != null && List1.remove(lutemon)) {

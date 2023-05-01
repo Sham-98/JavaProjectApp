@@ -14,19 +14,20 @@ public class BattleField extends Storage {
     }
     public String startBattle() {
         String battleResult = "";
+
         while (lutemonA.getHealth() > 0 && lutemonB.getHealth() > 0) {
+            int damage = lutemonA.getAttack() + lutemonA.getExperience();
+            int defense = lutemonB.getDefense();
 
-            battleResult += "1. " + lutemonA.getName() + "(" + lutemonA.getColor() + ") attack: " + lutemonA.getAttack() + "; def: "
-                + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
-                + "/" + lutemonA.getMaxHealth() +"\n";
+            battleResult += lutemonA.getName() + "(" + lutemonA.getColor() + ") attack: " + lutemonA.getAttack() + "; def: "
+                    + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
+                    + "/" + lutemonA.getMaxHealth() +"\n";
 
-            battleResult += "2. " + lutemonB.getName() + "(" + lutemonB.getColor() + ") attack: " + lutemonB.getAttack() + "; def: "
+            battleResult += lutemonB.getName() + "(" + lutemonB.getColor() + ") attack: " + lutemonB.getAttack() + "; def: "
                     + lutemonB.getDefense() + "; exp: " + lutemonB.getExperience() + "; health: " + lutemonB.getHealth()
                     + "/" + lutemonB.getMaxHealth() + "\n";
 
-            int damage = lutemonA.getAttack() + lutemonA.getExperience();
-            lutemonB.defende(damage);
-
+            lutemonB.defende(damage, defense);
             battleResult += lutemonA.getName() + " attacked " + lutemonB.getName() + " and dealt " + damage + " damage.\n\n";
 
             Lutemon temp = lutemonA;
@@ -43,7 +44,7 @@ public class BattleField extends Storage {
 
             if (lutemonA.getHealth() <= 0) {
                 battleResult += lutemonA.getName() + " died.\n";
-                lutemonA.gainExperience(1);
+                lutemonB.gainExperience(1);
                 removeDeadLutemon(lutemonA);
                 lutemonA = null;
                 break;
