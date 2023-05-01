@@ -57,13 +57,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
                 switch (checkedId) {
-                    case R.id.radioButtonHome1:
+                    case R.id.radioButtonWorkout1:
                         selectedList = Storage.getInstance().getHome();
                         break;
-                    case R.id.radioButtonHome2:
+                    case R.id.radioButtonWorkout2:
                         selectedList = Storage.getInstance().getTraining();
                         break;
-                    case R.id.radioButtonHome3:
+                    case R.id.radioButtonWorkout3:
                         selectedList = Storage.getInstance().getBattle();
                         break;
                     default:
