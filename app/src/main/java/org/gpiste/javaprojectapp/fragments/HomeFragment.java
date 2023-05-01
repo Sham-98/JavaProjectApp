@@ -3,18 +3,14 @@ package org.gpiste.javaprojectapp.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import org.gpiste.javaprojectapp.Lutemon;
 import org.gpiste.javaprojectapp.R;
@@ -61,13 +57,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
                 switch (checkedId) {
-                    case R.id.radioButton:
+                    case R.id.radioButtonHome1:
                         selectedList = Storage.getInstance().getHome();
                         break;
-                    case R.id.radioButton2:
+                    case R.id.radioButtonHome2:
                         selectedList = Storage.getInstance().getTraining();
                         break;
-                    case R.id.radioButton3:
+                    case R.id.radioButtonHome3:
                         selectedList = Storage.getInstance().getBattle();
                         break;
                     default:
