@@ -1,26 +1,63 @@
 package org.gpiste.javaprojectapp;
 
-public class BattleField extends Storage {
-    /*public void attack(Lutemon a, Lutemon b) {
-        System.out.println("Taistelu alkaa!");
-        System.out.println(a.getName() + " att: " + a.getAttack() + "; def: " + a.getDefense() + "; exp: " + a.getExperience() + "; health: " + a.getHealth() + "/" + a.getMaxHealth());
-        System.out.println(b.getName() + " att: " + b.getAttack() + "; def: " + b.getDefense() + "; exp: " + b.getExperience() + "; health: " + b.getHealth() + "/" + b.getMaxHealth());
+import java.util.ArrayList;
+import java.util.Scanner;
 
-        while (a.getHealth() > 0 && b.getHealth() > 0) {
-            b.defense(a.calculateDamage());
-            if (b.getHealth() > 0) {
-                System.out.println(b.getName() + " onnistui välttämään kuoleman.");
-                Lutemon temp = a;
-                a = b;
-                b = temp;
+public class BattleField extends Storage {
+    private Lutemon lutemonA;
+    private Lutemon lutemonB;
+    public BattleField(ArrayList<Lutemon> lutemons, int selectedLutemonA, int selectedLutemonB) {
+        lutemonA = lutemons.get(selectedLutemonA);
+        lutemonB = lutemons.get(selectedLutemonB);
+    }
+    public String startBattle() {
+        String battleResult = "";
+        while (lutemonA.getHealth() > 0 && lutemonB.getHealth() > 0) {
+
+            battleResult += lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
+            + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
+            + "/" + lutemonA.getMaxHealth() +"\n";
+
+            /*System.out.println(lutemonA.getName() + "(" + ") attack: " + lutemonA.getAttack() + "; def: "
+            + lutemonA.getDefense() + "; exp: " + lutemonA.getExperience() + "; health: " + lutemonA.getHealth()
+            + "/" + lutemonA.getMaxHealth());*/
+
+
+            if (lutemonB.getHealth() > 0) {
+
+                battleResult += lutemonB.getName() + " manages to escape death.\n";
+
+                //System.out.println(lutemonB.getName() + " manages to escape death.");
+
+                Lutemon temp = lutemonA;
+                lutemonA = lutemonB;
+                lutemonB = temp;
             } else {
-                System.out.println(b.getName() + " kuoli!");
-                //a.addExperience(1);
-                //storeLutemon(a);
-                //removeLutemon(b.getId());
+
+                battleResult += lutemonB.getName() + " died.\n";
+
+                //System.out.println(lutemonB.getName() + " died.");
+
+                lutemonA.gainExperience(1);
+                getHome().remove(lutemonB);
+                lutemonB = null;
             }
         }
+        if (lutemonA.getHealth() > 0) {
 
-        System.out.println("Taistelu on ohi!");
-    }*/
+            battleResult += lutemonB.getName() + " wom the battle\n";
+
+            //System.out.println(lutemonA.getName() + " wom the battle");
+        } else {
+
+            battleResult += lutemonA.getName() + " lost the battle.\n";
+
+            //System.out.println(lutemonA.getName() + " lost the battle.");
+
+            getHome().remove(lutemonA);
+            lutemonA = null;
+        }
+        return battleResult;
+    }
+
 }

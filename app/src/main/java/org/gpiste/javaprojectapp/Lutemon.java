@@ -12,8 +12,9 @@ public class Lutemon implements Serializable {
     private int health;
     private int maxHealth;
     private int id;
-
     protected int image;
+
+    private int experiencePoints;
 
     public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int id) {
         this.name = name;
@@ -54,21 +55,10 @@ public class Lutemon implements Serializable {
         return image;
     }
 
-    public void attack(Lutemon target) {
-        int damage = calculateDamage();
-        target.defense(damage);
+    public int getExperiencePoints() {
+        return experiencePoints;
     }
-
-    public int calculateDamage() {
-        int minDamage = (int) (0.5 * attack);
-        int maxDamage = (int) (1.5 * attack);
-        int damage = (int) (Math.random()*(maxDamage - minDamage + 1)) + minDamage;
-        return damage;
+    public void gainExperience(int experiencePoints) {
+        this.experiencePoints += experiencePoints;
     }
-
-    public void defense(int damage) {
-        int actualDamage = Math.max(0, damage - defense);
-        health = actualDamage;
-    }
-
 }
