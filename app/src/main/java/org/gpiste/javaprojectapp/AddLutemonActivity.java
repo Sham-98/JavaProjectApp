@@ -18,14 +18,6 @@ public class AddLutemonActivity extends AppCompatActivity {
 
         EditTextName = findViewById(R.id.editTextName);
     }
-
-    Toast toast;
-    private void makeToast(String string) {
-        if (toast != null) toast.cancel();
-        toast = Toast.makeText(getApplicationContext(), string, Toast.LENGTH_SHORT);
-        toast.show();
-    }
-
     public void addLutemon(View view) {
 
         String name = EditTextName.getText().toString();
@@ -53,6 +45,7 @@ public class AddLutemonActivity extends AppCompatActivity {
 
         Storage.getInstance().addLutemon(newLutemon);
 
-        makeToast("Lisätty");
+        Toast toast = Toast.makeText(getApplicationContext(), "Luotu uusi Lutemon", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

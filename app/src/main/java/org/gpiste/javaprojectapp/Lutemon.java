@@ -12,9 +12,6 @@ public class Lutemon implements Serializable {
     private int health;
     private int maxHealth;
     protected int image;
-
-    private int experiencePoints;
-
     public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int id) {
         this.name = name;
         this.color = color;
