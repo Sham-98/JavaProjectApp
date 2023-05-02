@@ -1,5 +1,6 @@
 package org.gpiste.javaprojectapp.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import org.gpiste.javaprojectapp.Lutemon;
 import org.gpiste.javaprojectapp.R;
@@ -30,7 +32,6 @@ public class TrainingFragment extends Fragment {
         if (getArguments() != null) {
         }
     }
-
     @Override
     public void onResume() {
         super.onResume();
@@ -97,6 +98,9 @@ public class TrainingFragment extends Fragment {
                     moveSelectedLutemons(selectedLutemons);
                     radioGroup.clearCheck();
                 }
+
+                Toast toast = Toast.makeText(getContext(), "Kokemuspiste ansaittu", Toast.LENGTH_SHORT);
+                toast.show();
             }
 
         });

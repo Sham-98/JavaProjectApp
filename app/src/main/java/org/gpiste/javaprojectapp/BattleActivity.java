@@ -57,9 +57,6 @@ public class BattleActivity extends AppCompatActivity {
                     }
                 }
 
-                //fightButton.setText("Button was clicked");
-                //battleResultTextView.setText("Text");
-
                 if (selectedLutemonCount == 2) {
                     battleResultTextView.setText("");
                     BattleField battleField = new BattleField(Storage.getInstance().getBattle(),
@@ -76,14 +73,13 @@ public class BattleActivity extends AppCompatActivity {
     private void updateView() {
         LinearLayout linearLayoutBattleActivity = findViewById(R.id.battleActivityLinearLayout1);
         linearLayoutBattleActivity.removeAllViews();
-        checkBoxes.clear();
         lutemons = Storage.getInstance().getBattle();
+        checkBoxes.clear();
+
         for (Lutemon lutemon : lutemons) {
             CheckBox checkBox = new CheckBox((this));
             checkBox.setText(lutemon.getName() + "(" + lutemon.getColor() + ")");
-            checkBox.setTag(lutemon);
             linearLayoutBattleActivity.addView(checkBox);
-            checkBoxes.add(checkBox);
         }
     }
 
