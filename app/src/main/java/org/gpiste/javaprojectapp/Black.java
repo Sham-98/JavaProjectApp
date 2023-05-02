@@ -6,3 +6,4 @@ public class Black extends Lutemon {
         image = R.drawable.black;
     }
 }
+
