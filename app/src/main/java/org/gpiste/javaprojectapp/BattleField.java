@@ -4,7 +4,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class BattleField extends Storage {
     private Lutemon lutemonA;
     private Lutemon lutemonB;

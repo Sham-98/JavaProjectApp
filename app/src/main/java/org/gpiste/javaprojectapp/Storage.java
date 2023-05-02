@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public class Storage {
 
     private static Storage storage = null;
-    private ArrayList<Lutemon> home;
-    private ArrayList<Lutemon> training;
-    private ArrayList<Lutemon> battle;
+    private ArrayList<Lutemon> homeList;
+    private ArrayList<Lutemon> trainingList;
+    private ArrayList<Lutemon> battleList;
 
     public static synchronized Storage getInstance() {
         if (storage ==null) {
@@ -17,29 +17,29 @@ public class Storage {
         return storage;
     }
     public Storage() {
-        home = new ArrayList<>();
-        training = new ArrayList<>();
-        battle = new ArrayList<>();
+        homeList = new ArrayList<>();
+        trainingList = new ArrayList<>();
+        battleList = new ArrayList<>();
     }
 
     public void addLutemon(Lutemon lutemon) {
-        home.add(lutemon);
+        homeList.add(lutemon);
     }
 
     public ArrayList<Lutemon> getHome() {
-        return home;
+        return homeList;
     }
 
     public ArrayList<Lutemon> getTraining() {
-        return training;
+        return trainingList;
     }
 
     public ArrayList<Lutemon> getBattle() {
-        return battle;
+        return battleList;
     }
 
     public void removeDeadLutemon(Lutemon lutemon) {
-        battle.remove(lutemon);
+        battleList.remove(lutemon);
     }
     public void moveLutemon(Lutemon lutemon, ArrayList<Lutemon> List1, ArrayList<Lutemon> List2) {
         if (List1 != null && List2 != null && List1.remove(lutemon)) {
