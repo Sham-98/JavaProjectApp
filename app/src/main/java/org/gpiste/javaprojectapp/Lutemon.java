@@ -2,6 +2,7 @@ package org.gpiste.javaprojectapp;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Random;
 
 public class Lutemon implements Serializable {
     private String name;
@@ -49,7 +50,8 @@ public class Lutemon implements Serializable {
         this.experience += experiencePoints;
     }
     public void defende(int damage, int def) {
-        int totalDamage = damage - def;
+        int random = damage + new Random().nextInt(3);
+        int totalDamage = random - def;
         if (totalDamage > 0) {
             this.health -= totalDamage;
         }

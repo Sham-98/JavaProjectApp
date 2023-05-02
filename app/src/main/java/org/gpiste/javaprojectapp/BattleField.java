@@ -28,9 +28,9 @@ public class BattleField extends Storage {
                     + "/" + lutemonB.getMaxHealth() + "\n";
 
             lutemonB.defende(damage, defense);
-            battleResult += lutemonA.getName() + " hyökkää " + lutemonB.getName() + ":n kimppuun ja aiheuttaa " + damage + " pistettä vahinkoa.\n";
+            battleResult += lutemonA.getName() + " hyökkää " + lutemonB.getName() + ":n kimppuun.\n";
 
-            battleResult += lutemonB.getName() + " onnistui pakenemaan kuolemaa:\n\n";
+            battleResult += lutemonB.getName() + " onnistui pakenemaan kuolemaa.\n\n";
 
             Lutemon temp = lutemonA;
             lutemonA = lutemonB;
